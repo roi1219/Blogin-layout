@@ -33,6 +33,10 @@ body {
     margin: 0 0;
 }
 
+button{
+    cursor: pointer;
+}
+
 /* components */
 
 .main-header {
@@ -75,6 +79,7 @@ body {
     padding-inline-start: 40px;
     padding-inline-end: 40px;
     border-right: 1px solid black;
+    justify-content: center;
 }
 
 .main-nav>*:first-child {
@@ -127,7 +132,6 @@ img {
     background-color: white;
     color: #C2C1C1;
     border: 3px solid #C2C1C1;
-    cursor: pointer;
 }
 
 .card button:hover {
@@ -192,6 +196,7 @@ footer .main-content .logo {
 
 footer ul {
     width: 221px;
+    position: relative;
 }
 
 footer ul li {
@@ -199,57 +204,32 @@ footer ul li {
     width: 41px;
     background-color: #E5E5E5;
     justify-content: center;
-    position: relative;
+    /* position: relative; */
 }
 
 .fa {
     color: #818181
 }
 
-.fa-facebook {
-    position: absolute;
-    top: 34%;
-    left: 40%;
-}
-.fa-twitter {
-    position: absolute;
-    top: 34%;
-    left: 32%;
-}
-.fa-behance {
-    position: absolute;
-    top: 36%;
-    left: 30%;
-}
-.fa-dribbble {
-    position: absolute;
-    top: 33%;
-    left: 33%;
+.fa-facebook:hover {
+    background-color: #516FAD;
+    color: #FFFFFF;
 }
 
-footer ul li:nth-child(1):hover{
-    background-color: blue;
-}
-footer ul li:nth-child(1) span:hover{
+.fa-twitter:hover {
+    background-color: rgb(71, 158, 212);
     color: #FFFFFF;
 }
-footer ul li:nth-child(2):hover{
-    background-color: purple;
+
+.fa-instagram:hover {
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  color:#FFFFFF
 }
-footer ul li:nth-child(2) span:hover{
+
+.fa-github:hover {
+    background-color: #24292e;
     color: #FFFFFF;
-}
-footer ul li:nth-child(3):hover{
-    background-color: white;
-}
-footer ul li:nth-child(3) span:hover{
-    color: blue;
-}
-footer ul li:nth-child(4):hover{
-    background-color: white;
-}
-footer ul li:nth-child(4) span:hover{
-    color: palevioletred;
 }
 
 /* helpers */
@@ -276,4 +256,17 @@ footer ul li:nth-child(4) span:hover{
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+@media (min-width:800px){
+    .main-content{
+        width: 760px;
+    }
+}
+
+
+@media (min-width:1020px){
+    .main-content{
+        width: 980px;
+    }
 }
