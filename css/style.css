@@ -260,21 +260,47 @@ footer ul li {
 }
 
 @media (max-width:800px) {
+    .main-nav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 200px;
+        transform: translateX(100%);
+        box-shadow: none;
+        transition: transform .8s, box-shadow .8s;
+    }
+    
+    body.menu-open .main-nav {
+        transform: translateX(0);
+        box-shadow: -4px 0px 15px 0px black;
+    }
+
+    .main-screen {
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgb(0 0 0 / 50%);
+        cursor: pointer;
+        transition: opacity .8s;
+    }
+
+    body.menu-open .main-screen {
+        opacity: 1;
+        visibility: visible;
+    }
     .main-content {
-        width: 400px;
+        width: 310px;
         border:none
     }
     .card h2 {
         margin-bottom: 0;
-    }
-    header ul {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: 0px;
-        background-color: #292929;
-        right: 0px;
-        width: 250px;
     }
     .main-nav>*{
         height: 40px;
@@ -293,6 +319,7 @@ footer ul li {
     img{
         width: 100%;
         margin-inline-end: 0;
+        margin-bottom: 10px;
     }
     .card-content{
         width: 100%;
@@ -300,11 +327,15 @@ footer ul li {
     .card-content h2{
         font-size: 20px;
         margin-inline-end: 0;
+        margin-bottom: 15px;
     }
     .card-content p{
-        font-size: 20px;
         margin-right: 0;
         margin-bottom: 10px;
+    }
+
+    footer .copy-right{
+        width: fit-content;
     }
 }
 
