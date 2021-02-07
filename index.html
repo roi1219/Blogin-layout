@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,14 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Blogin</title>
 </head>
+
 <body>
     <header class="main-header">
+
         <div class="main-content flex space-between align-center">
             <div class="logo">Blogin<span style="color:greenyellow">.</span></div>
-            <ul class="main-nav clean-list flex align-center">
+            <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+            <ul class="main-nav clean-list align-center">
                 <li class="flex align-center"><a href="#">Journal</a></li>
                 <li class="flex align-center"><a href="#">About</a></li>
                 <li class="flex align-center"><a href="#">Work</a></li>
@@ -26,7 +30,9 @@
                 <img src="img/img1.jfif" alt="">
                 <div class="card-content flex">
                     <h2>duis aute irure dolor in henderit in voluptate.</h2>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                        doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure
+                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
                     <button>Continue reading</button>
                 </div>
             </article>
@@ -34,7 +40,9 @@
                 <img src="img/img2.png" alt="">
                 <div class="card-content flex">
                     <h2>duis aute irure dolor in henderit in voluptate.</h2>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                        doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure
+                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
                     <button>Continue reading</button>
                 </div>
             </article>
@@ -42,29 +50,56 @@
                 <img src="img/img3.png" alt="">
                 <div class="card-content flex">
                     <h2>duis aute irure dolor in henderit in voluptate.</h2>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                        doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure
+                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
                     <button>Continue reading</button>
                 </div>
             </article>
         </div>
     </main>
-        <div class="main-content main-content-footer flex space-between align-center">
-            <button>←Previous</button>
-            <button>Next→</button>
-        </div>
+    <div class="main-content main-content-footer flex space-between align-center">
+        <button>←Previous</button>
+        <button>Next→</button>
+    </div>
 
     <footer>
         <div class="main-content flex">
             <div class="logo">Blogin<span style="color:greenyellow">.</span></div>
-            <div class="copy-right">&copy;2014 Blogin.com - All Rights Reserved - Find more free templates at <a href="#">Pixelhint.com</a></div>
+            <div class="copy-right">&copy;2014 Blogin.com - All Rights Reserved - Find more free templates at <a
+                    href="#">Pixelhint.com</a></div>
             <ul class="flex space-between clean-list align-center">
-                <a href="http://www.facebook.com" target="_blank"><li class="fa fa-facebook fa-stack"></li></a>
-                <a href="http://www.twitter.com" target="_blank"><li class="fa fa-twitter fa-stack"></li></a>
-                <a href="http://www.instagram.com" target="_blank"><li class="fa fa-instagram fa-stack"></li></a>
-                <a href="https://github.com/roi1219" target="_blank"><li class="fa fa-github fa-stack"></li></a>
+                <a href="http://www.facebook.com" target="_blank">
+                    <li class="fa fa-facebook fa-stack"></li>
+                </a>
+                <a href="http://www.twitter.com" target="_blank">
+                    <li class="fa fa-twitter fa-stack"></li>
+                </a>
+                <a href="http://www.instagram.com" target="_blank">
+                    <li class="fa fa-instagram fa-stack"></li>
+                </a>
+                <a href="https://github.com/roi1219" target="_blank">
+                    <li class="fa fa-github fa-stack"></li>
+                </a>
             </ul>
         </div>
     </footer>
-    
+
+    <script>
+        function toggleMenu() {
+            console.log('hi');
+            var elUL=document.querySelector('.main-nav');
+            if(elUL.classList.contains('flex')){
+                elUL.classList.remove('flex');
+                elUL.style.display='none';
+            }
+            else{
+                elUL.classList.add('flex');
+                // elUL.style.display='none';
+            }
+        }
+
+    </script>
 </body>
+
 </html>
