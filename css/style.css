@@ -69,7 +69,8 @@ button {
     color: #FFFFFF;
 }
 
-.main-nav li a:hover {
+.main-nav li:hover {
+    cursor: pointer;
     color: #58C93A;
     border-bottom: 5px solid #58C93A;
 }
@@ -84,6 +85,26 @@ button {
 
 .main-nav>*:first-child {
     border-left: 1px solid black;
+    position: relative;
+}
+
+.dropdown{
+    flex-direction: column;
+    position: absolute;
+    bottom: -100px;
+    background-color: #161616bd;
+    width: 100%;
+    align-items: center;
+}
+
+.dropdown li{
+    height: 25px;
+}
+
+.dropdown li:hover{
+    cursor: pointer;
+    color: #58C93A;
+    border-bottom: 5px solid #58C93A;
 }
 
 .card {
@@ -160,7 +181,6 @@ img {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-radius: 20%;
 }
 
 .modal form{

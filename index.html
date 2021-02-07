@@ -17,7 +17,14 @@
         <div class="main-content flex space-between align-center">
             <div class="logo">Blogin<span style="color:greenyellow">.</span></div>
             <ul class="main-nav clean-list align-center">
-                <li class="flex align-center"><a href="#">Journal</a></li>
+                <li onmouseover="toggleDropdown()" onmouseout="toggleDropdown()" onclick="toggleDropdown()" class="flex align-center">Journal
+                    <ul class="dropdown clean-list hidden flex">
+                        <li>October 2016</li>
+                        <li>January 2017</li>
+                        <li>April 2017</li>
+                        <li>July 2017</li>
+                    </ul>
+                </li>
                 <li class="flex align-center"><a href="#">About</a></li>
                 <li class="flex align-center"><a href="#">Work</a></li>
                 <li class="flex align-center"><a href="#">Contact</a></li>
@@ -25,6 +32,8 @@
             <button class="toggle-btn" onclick="toggleMenu()">☰</button>
         </div>
     </header>
+
+    </div>
 
     <main class="main-content">
         <div class="cards">
@@ -63,7 +72,9 @@
 
     <section class="hidden modal">
         <h4>Lorem ipsum dolor sit amet</h4>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corrupti maiores at rerum quasi, nisi quae, est impedit consequatur ex officiis accusamus minus! Asperiores vitae eaque veniam reiciendis dolor quibusdam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis corrupti maiores at rerum quasi, nisi quae,
+            est impedit consequatur ex officiis accusamus minus! Asperiores vitae eaque veniam reiciendis dolor
+            quibusdam.</p>
         <h5>Join us to get access to the latest stories!</h5>
         <form class="flex">
             <label for="email">Email: </label>
@@ -104,13 +115,16 @@
         function toggleMenu() {
             document.body.classList.toggle('menu-open');
         }
-        function infoModal(){
+        function infoModal() {
             document.querySelector('.modal').classList.toggle('hidden');
             document.body.classList.toggle('modal-open');
         }
-        function closeModal(){
+        function closeModal() {
             document.querySelector('.modal').classList.toggle('hidden');
             document.body.classList.toggle('modal-open');
+        }
+        function toggleDropdown(){
+            document.querySelector('.dropdown').classList.toggle('hidden');
         }
 
     </script>
