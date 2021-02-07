@@ -17,7 +17,8 @@
         <div class="main-content flex space-between align-center">
             <div class="logo">Blogin<span style="color:greenyellow">.</span></div>
             <ul class="main-nav clean-list align-center">
-                <li onmouseover="toggleDropdown()" onmouseout="toggleDropdown()" onclick="toggleDropdown()" class="flex align-center">Journal
+                <li  onmouseover="toggleDropdown()" onmouseout="toggleDropdown()"
+                    class="flex align-center">Journal
                     <ul class="dropdown clean-list hidden flex">
                         <li>October 2016</li>
                         <li>January 2017</li>
@@ -123,7 +124,8 @@
             document.querySelector('.modal').classList.toggle('hidden');
             document.body.classList.toggle('modal-open');
         }
-        function toggleDropdown(){
+        function toggleDropdown() {
+            console.log('hi');
             document.querySelector('.dropdown').classList.toggle('hidden');
         }
 

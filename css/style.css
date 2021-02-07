@@ -44,6 +44,8 @@ button {
     height: 130px;
     background-color: #292929;
     color: #FFFFFF;
+    position: fixed;
+    top:0;
 }
 
 .main-header .main-content {
